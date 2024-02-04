@@ -5,7 +5,6 @@ const { Spot, Review, ReviewImage, User, SpotImage } = require('../../db/models'
 
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
-const review = require('../../db/models/review');
 
 const router = express.Router();
 
@@ -86,7 +85,7 @@ router.post('/:reviewId/images', requireAuth, async (req, res) => {
         })
     }
 
-    if (review.dataValues.ReviewImages >= 10) {
+    if (review.ReviewImages.length >= 10) {
         res.status(403);
         return res.json({
             message: "Maximum number of images for this resource was reached"
