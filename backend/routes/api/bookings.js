@@ -29,10 +29,13 @@ router.get('/current', requireAuth, async (req, res) => {
             }
         })
         spot.dataValues.previewImage = spotImg.dataValues.preview ? spotImg.dataValues.url : "Preview not available";
+        spot.dataValues.lat = parseFloat(spot.dataValues.lat);
+        spot.dataValues.lng = parseFloat(spot.dataValues.lng);
+        spot.dataValues.price = parseFloat(spot.dataValues.price);
     }
 
     res.json({
-        Booking: bookings
+        Bookings: bookings
     })
 })
 
@@ -102,7 +105,7 @@ router.put('/:bookingId', requireAuth, async (req, res) => {
             message: "Sorry, this spot is already booked for the specified dates",
             errors: {
                 startDate: "Start date conflicts with an existing booking",
-                endDate: "End date conflicts with and existing Booking"
+                endDate: "End date conflicts with an existing Booking"
             }
         })
     }

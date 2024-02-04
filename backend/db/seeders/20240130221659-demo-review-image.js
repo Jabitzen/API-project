@@ -32,6 +32,10 @@ module.exports = {
       {
         reviewId: 3,
         url: "https://images.ctfassets.net/umhrp0op95v1/g6jo58M8vu9BOEw4Lab5S/7a53517db07c3e29259997a5926cafef/East_Luterra_740.jpg"
+      },
+      {
+        reviewId: 4,
+        url: "https://images.ctfassets.net/umhrp0op95v1/4a4VThLd74ApE2bS053N40/1d2e02de3de6a4f643377da24c8d70ea/LA_Voldis_Beauty_Screenshot__3__740.jpeg"
       }
     ], { validate: true });
   },
@@ -46,7 +50,7 @@ module.exports = {
     options.tableName = 'ReviewImages';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(options, {
-      reviewId: { [Op.in]: [1, 2, 3] }
+      reviewId: { [Op.in]: [1, 2, 3, 4] }
     }, {});
   }
 };

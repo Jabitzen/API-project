@@ -56,6 +56,10 @@ router.get('/current', requireAuth, async(req, res) => {
             attributes: ['url'],
         })
         review.dataValues.Spot.dataValues.previewImage = preview.url;
+
+        review.dataValues.Spot.dataValues.lat = parseFloat(review.dataValues.Spot.dataValues.lat);
+        review.dataValues.Spot.dataValues.lng = parseFloat(review.dataValues.Spot.dataValues.lng);
+        review.dataValues.Spot.dataValues.price = parseFloat(review.dataValues.Spot.dataValues.price);
     }
 
     res.json({Reviews: reviews});

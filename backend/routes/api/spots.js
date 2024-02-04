@@ -97,7 +97,7 @@ validateQuery = [
     query('maxPrice')
         .optional()
         .isFloat({min: 0})
-        .withMessage("Maximum    price must be greater than or equal to 0"),
+        .withMessage("Maximum price must be greater than or equal to 0"),
     handleValidationErrors
 ]
 
@@ -134,6 +134,10 @@ router.get('/current', requireAuth, async (req, res) => {
         } else {
             curr.dataValues.previewImage = "Not Available";
         }
+
+        curr.lat = parseFloat(curr.lat);
+        curr.lng = parseFloat(curr.lng);
+        curr.price = parseFloat(curr.price);
     }
     res.json({
         Spots: userSpots
@@ -369,6 +373,10 @@ router.get('/:spotId', requireAuth, async (req, res) => {
     spot.dataValues.numReviews = count;
     spot.dataValues.avgStarRating = avgRating;
     // preview image
+
+    spot.lat = parseFloat(spot.lat);
+    spot.lng = parseFloat(spot.lng);
+    spot.price = parseFloat(spot.price);
     res.json(spot);
 });
 
@@ -524,6 +532,10 @@ router.post('/', requireAuth, validateSpots, async (req, res) => {
         price
     })
 
+    spot.lat = parseFloat(spot.lat);
+    spot.lng = parseFloat(spot.lng);
+    spot.price = parseFloat(spot.price);
+
     res.status(201);
     res.json(spot);
 });
@@ -558,6 +570,10 @@ router.put('/:spotId', requireAuth, validateSpots, async (req, res) => {
     spot.name = name || spot.name
     spot.description = description || spot.description
     spot.price = price || spot.price
+
+    spot.lat = parseFloat(spot.lat);
+    spot.lng = parseFloat(spot.lng);
+    spot.price = parseFloat(spot.price);
 
     await spot.save();
     res.json(spot);
