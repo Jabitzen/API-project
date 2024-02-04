@@ -38,6 +38,12 @@ module.exports = {
         userId: 1,
         review: "Luterra was super insane cutscene wise, so this one is going high on my list!",
         stars: 5
+      },
+      {
+        spotId: 4,
+        userId: 3,
+        review: "Kalinar is a scam, cutting elixirs here never gets me any good results!",
+        stars: 1
       }
     ], { validate: true });
   },
@@ -52,7 +58,7 @@ module.exports = {
     options.tableName = 'Reviews';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(options, {
-      stars: { [Op.in]: [2, 3, 5] }
+      stars: { [Op.in]: [1, 2, 3, 5] }
     }, {});
   }
 };

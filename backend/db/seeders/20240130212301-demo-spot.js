@@ -57,6 +57,18 @@ module.exports = {
       name: "Port Krona",
       description: "Luterra's finest port with easy access to the vast seas of arkesia",
       price: 34.89
+    },
+    {
+      ownerId: 3,
+      address: "Rohendel",
+      city: "Feiton",
+      state: "Kalaja",
+      country: "Rowen",
+      lat: 35.9873,
+      lng: 35.2340,
+      name: "Kalinar",
+      description: "The best place to blow through all of your gold for no upgrades",
+      price: 77.89
     }
    ], { validate: true });
   },
@@ -71,7 +83,7 @@ module.exports = {
     options.tableName = 'Spots';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(options, {
-      name: { [Op.in]: ['Ereonnor Lobby', 'The Great Castle', 'Port Krona'] }
+      name: { [Op.in]: ['Ereonnor Lobby', 'The Great Castle', 'Port Krona', "Kalinar"] }
     }, {});
   }
 };
