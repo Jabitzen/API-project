@@ -61,7 +61,7 @@ const validateSignup = [
       const err = new Error('User already exists');
       err.title = 'User already exists';
       err.errors = {
-        username: 'User with that email already exists'
+        email: 'User with that email already exists'
       };
       err.status = 500;
       return next(err);
