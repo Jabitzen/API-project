@@ -171,7 +171,6 @@ router.get('/:spotId/reviews', async (req, res) => {
             },
             attributes: ['id', 'url']
         })
-        // console.log(reviewImages)
         review.dataValues.ReviewImages = reviewImages;
     }
     res.json({
