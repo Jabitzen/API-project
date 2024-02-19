@@ -1,0 +1,9 @@
+.spot-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.spot-card-image {
+    width: 400px;
+    height: 300px;
+}
