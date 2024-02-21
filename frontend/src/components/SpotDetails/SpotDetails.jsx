@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import { fetchSpot } from "../../store/spots"
+import './SpotDetails.css'
 
 function SpotDetails() {
     const dispatch = useDispatch()
@@ -13,16 +14,14 @@ function SpotDetails() {
         dispatch(fetchSpot(spotId))
     }, [dispatch, spotId])
 
-    console.log(spot)
-
 
     return (
         <div>
             <h2>{spot?.name}</h2>
             <h4>{spot?.city}, {spot?.state}, {spot?.country}</h4>
-            <div>
+            <div className="spot-img-container">
                 {images?.map(image => (
-                    <img src={image.url} alt={spot?.name} key={image.id} />
+                    <img src={image.url} alt={spot?.name} key={image.id} className={`spot-image-${image.id - 1}`}/>
                 ))}
             </div>
             <div>
