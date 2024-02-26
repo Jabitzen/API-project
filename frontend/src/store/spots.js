@@ -50,8 +50,40 @@ export const fetchSpot = (spotId) => async (dispatch) => {
     }
 }
 
+
+export const fetchUserSpots = () => async (dispatch) => {
+  const response = await csrfFetch('/api/spots/current')
+
+  if(response.ok) {
+    const currentSpots = await response.json()
+    dispatch(loadSpots(currentSpots))
+    return currentSpots
+  }
+}
+
+export const addImages = (spotId, images) => async () => {
+  const imagesArr = []
+  for(let i = 0; i < images.length; i++) {
+    const body = {url: images[i]}
+    if(i === 0) body.preview = true
+    else body.preview = false
+    const response = await csrfFetch(`/api/spots/${spotId}/images`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+    if(response.ok) {
+      const image = response.json()
+      imagesArr.push(image)
+    }
+  }
+  return imagesArr
+}
+
 export const createSpot = (spot) => async (dispatch) => {
-    const response = await fetch('/api/spots', {
+    const response = await csrfFetch('/api/spots', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -71,7 +103,7 @@ export const createSpot = (spot) => async (dispatch) => {
 }
 
 export const updateSpot = (spot) => async (dispatch) => {
-    const response = await fetch(`/api/spots/${spot.id}`, {
+    const response = await csrfFetch(`/api/spots/${spot.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -81,6 +113,7 @@ export const updateSpot = (spot) => async (dispatch) => {
 
     if(response.ok) {
       const spot = await response.json()
+      console.log("UPDATE", spot)
       dispatch(editSpot(spot))
       return spot
     }
@@ -90,8 +123,8 @@ export const updateSpot = (spot) => async (dispatch) => {
     }
 }
 
-export const deleteSpots = (spotId) => async (dispatch) => {
-    const response = await fetch(`/api/spots/${spotId}`, {
+export const deleteSpot = (spotId) => async (dispatch) => {
+    const response = await csrfFetch(`/api/spots/${spotId}`, {
       method: 'DELETE'
     })
 

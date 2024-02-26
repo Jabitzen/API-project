@@ -8,6 +8,10 @@ import * as sessionActions from './store/session';
 import { Modal } from './context/Modal';
 import LandingPage from './components/LandingPage';
 import SpotDetails from './components/SpotDetails';
+// import SpotForm from './components/SpotForm';
+import ManageSpots from './components/ManageSpots';
+import CreateSpot from './components/CreateSpot';
+import UpdateSpot from './components/UpdateSpot/UpdateSpot';
 
 function Layout() {
   const dispatch = useDispatch();
@@ -37,8 +41,24 @@ const router = createBrowserRouter([
         element: <LandingPage />
       },
       {
+        path: '/spots/new',
+        element: <CreateSpot />
+      },
+      {
+        path: '/spots/current',
+        element: <ManageSpots />
+      },
+      {
         path: '/spots/:spotId',
         element: <SpotDetails />
+      },
+      {
+        path: '/spots/:spotId/edit',
+        element: <UpdateSpot />
+      },
+      {
+        path: '*',
+        element: <h2>Page Not Found</h2>
       }
       // {
       //   path: 'login',

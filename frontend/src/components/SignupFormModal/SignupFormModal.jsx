@@ -13,12 +13,14 @@ function SignupFormModal() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const [submit, setSubmit] = useState(false)
   const { closeModal } = useModal();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password === confirmPassword) {
       setErrors({});
+      setSubmit(true);
       return dispatch(
         sessionActions.signup({
           email,
@@ -42,72 +44,86 @@ function SignupFormModal() {
   };
 
   return (
-    <>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
+    <div className='signup-container'>
+      <div className='signup-header'>Sign Up</div>
+      {submit && errors.email && <p className='error'>{errors.email}</p>}
+      {submit && errors.username && <p className='error'>{errors.username}</p>}
+      {submit && errors.firstName && <p className='error'>{errors.firstName}</p>}
+      {submit && errors.lastName && <p className='error'>{errors.lastName}</p>}
+      {submit && errors.password && <p className='error'>{errors.password}</p>}
+      {submit && errors.confirmPassword && <p className='error'>{errors.confirmPassword}</p>}
+      <form onSubmit={handleSubmit} className='signup-form'>
         <label>
-          Email
           <input
+            className='signup-input'
+            placeholder='Email'
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </label>
-        {errors.email && <p>{errors.email}</p>}
         <label>
-          Username
           <input
+            placeholder='Username (minimum 4 characters)'
+            className='signup-input'
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
           />
         </label>
-        {errors.username && <p>{errors.username}</p>}
+
         <label>
-          First Name
           <input
+            placeholder='First Name'
+            className='signup-input'
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
           />
         </label>
-        {errors.firstName && <p>{errors.firstName}</p>}
+
         <label>
-          Last Name
           <input
+            placeholder='Last Name'
+            className='signup-input'
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
           />
         </label>
-        {errors.lastName && <p>{errors.lastName}</p>}
         <label>
-          Password
           <input
+            placeholder='Password (minimum 6 characters)'
+            className='signup-input'
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </label>
-        {errors.password && <p>{errors.password}</p>}
         <label>
-          Confirm Password
           <input
+            placeholder='Confirm Password'
+            className='signup-input'
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
           />
         </label>
-        {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
-        <button type="submit">Sign Up</button>
+        <button
+          type="submit"
+          disabled={!email.length || username.length < 4 || !firstName.length || !lastName.length || password.length < 6 || !confirmPassword.length}
+          className='signup-btn'
+        >
+          Sign Up
+        </button>
       </form>
-    </>
+    </div>
   );
 }
 
