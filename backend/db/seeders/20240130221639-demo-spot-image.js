@@ -73,7 +73,7 @@ module.exports = {
       },
       {
         spotId: 3,
-        url: "https://destiny.wiki.gallery/images/6/67/Grimoire_Venus.jpg",
+        url: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/destiny/5/51/DTG_PlanetDetailPage_venus.jpg",
         preview: true
       },
       {
@@ -98,7 +98,7 @@ module.exports = {
       },
       {
         spotId: 4,
-        url: "https://destiny.wiki.gallery/images/thumb/5/55/Grimoire_Mars.jpg/461px-Grimoire_Mars.jpg?20150914031856",
+        url: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/destiny/2/24/DTG_PlanetDetailPage_mars.jpg",
         preview: true
       },
       {
@@ -123,7 +123,7 @@ module.exports = {
       },
       {
         spotId: 5,
-        url: "https://destiny.wiki.gallery/images/5/54/Europa-moon.jpg",
+        url: "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/02/Destiny-2-Europa.jpg",
         preview: true
       },
       {
@@ -198,7 +198,7 @@ module.exports = {
       },
       {
         spotId: 8,
-        url: "https://destiny.wiki.gallery/images/thumb/3/3f/Io1.jpg/428px-Io1.jpg?20210125085143",
+        url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d81e580-6756-45dd-b08a-632060cb5103/dcj5mq6-041131e8-3aa1-4fcb-8358-47c79530a8ba.png/v1/fill/w_1024,h_576,q_80,strp/destiny_2___io_skybox_by_theorwell_dcj5mq6-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvNGQ4MWU1ODAtNjc1Ni00NWRkLWIwOGEtNjMyMDYwY2I1MTAzXC9kY2o1bXE2LTA0MTEzMWU4LTNhYTEtNGZjYi04MzU4LTQ3Yzc5NTMwYThiYS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.qO2esTr-QiljT51v-X7uwFS6TKEYYQ587FksQOZ6L7s",
         preview: true
       },
       {
