@@ -198,7 +198,7 @@ module.exports = {
       },
       {
         spotId: 8,
-        url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d81e580-6756-45dd-b08a-632060cb5103/dcj5mq6-041131e8-3aa1-4fcb-8358-47c79530a8ba.png/v1/fill/w_1024,h_576,q_80,strp/destiny_2___io_skybox_by_theorwell_dcj5mq6-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvNGQ4MWU1ODAtNjc1Ni00NWRkLWIwOGEtNjMyMDYwY2I1MTAzXC9kY2o1bXE2LTA0MTEzMWU4LTNhYTEtNGZjYi04MzU4LTQ3Yzc5NTMwYThiYS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.qO2esTr-QiljT51v-X7uwFS6TKEYYQ587FksQOZ6L7s",
+        url: "https://pbs.twimg.com/media/Fg1G5g0WYAA4FPw.jpg:large",
         preview: true
       },
       {
