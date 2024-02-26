@@ -18,6 +18,7 @@
     grid-template-areas:
     "spot-img-0 spot-img-0 spot-img-1 spot-img-2"
     "spot-img-0 spot-img-0 spot-img-3 spot-img-4";
+    /* height: 300px; */
 }
 
 .spot-img-container img {

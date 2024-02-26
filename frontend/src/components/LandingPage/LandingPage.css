@@ -4,6 +4,11 @@
     justify-content: center;
 }
 
+
+.container {
+    margin-top: 2rem;
+}
+
 .spot-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

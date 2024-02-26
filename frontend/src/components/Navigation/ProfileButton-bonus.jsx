@@ -5,6 +5,7 @@ import OpenModalMenuItem from './OpenModalMenuItem';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
 import { Link, useNavigate } from 'react-router-dom';
+import './Navigation.css'
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -33,6 +34,8 @@ function ProfileButton({ user }) {
 
   const closeMenu = () => setShowMenu(false);
 
+
+
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
@@ -44,7 +47,7 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button onClick={toggleMenu}>
+      <button onClick={toggleMenu} className="profile-button">
         <i className="fas fa-user-circle" />
       </button>
       <ul className={ulClassName} ref={ulRef}>

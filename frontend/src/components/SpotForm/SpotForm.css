@@ -37,19 +37,20 @@
 
 .city-state {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    /* align-items: flex-end; */
+    /* justify-content: space-between; */
 }
 
 .city-state-comma {
     display: flex;
     align-items: flex-end;
-    gap: 1rem;
+    /* gap: .5rem; */
 }
 
 .city-label {
     display: flex;
     gap: 0.5rem;
+    width: 800px;
 }
 
 .dollar-sign, .comma {

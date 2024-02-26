@@ -36,20 +36,20 @@ function SpotForm({ spot, formType }) {
         if (!name.length) errors.name = 'Name is required'
         if (!price) errors.price = 'Price per night is required'
         if (formType === 'Create' && !prevImg) errors.prevImg = 'Preview image is required'
-        if (prevImg && !validImage(prevImg)) errors.prevImg = 'Image URL must end in .png, .jpg, or .jpeg'
-        if (img1 && !validImage(img1)) errors.img1 = 'Image URL must end in .png, .jpg, or .jpeg'
-        if (img2 && !validImage(img2)) errors.img2 = 'Image URL must end in .png, .jpg, or .jpeg'
-        if (img3 && !validImage(img3)) errors.img3 = 'Image URL must end in .png, .jpg, or .jpeg'
-        if (img4 && !validImage(img4)) errors.img4 = 'Image URL must end in .png, .jpg, or .jpeg'
+        // if (prevImg && !validImage(prevImg)) errors.prevImg = 'Image URL must end in .png, .jpg, or .jpeg'
+        // if (img1 && !validImage(img1)) errors.img1 = 'Image URL must end in .png, .jpg, or .jpeg'
+        // if (img2 && !validImage(img2)) errors.img2 = 'Image URL must end in .png, .jpg, or .jpeg'
+        // if (img3 && !validImage(img3)) errors.img3 = 'Image URL must end in .png, .jpg, or .jpeg'
+        // if (img4 && !validImage(img4)) errors.img4 = 'Image URL must end in .png, .jpg, or .jpeg'
         setValidationErrors(errors)
     }, [country, address, city, state, lat, lng, description, name, price, prevImg, img1, img2, img3, img4, formType])
 
-    const validImage = img => {
-        if (img.endsWith('.png')) return true
-        if (img.endsWith('.jpg')) return true
-        if (img.endsWith('.jpeg')) return true
-        return false
-    }
+    // const validImage = img => {
+    //     if (img.endsWith('.png')) return true
+    //     if (img.endsWith('.jpg')) return true
+    //     if (img.endsWith('.jpeg')) return true
+    //     return false
+    // }
 
     const handleSubmit = async e => {
         e.preventDefault()
