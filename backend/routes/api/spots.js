@@ -373,7 +373,6 @@ router.get('/:spotId', async (req, res) => {
     spot.lat = parseFloat(spot.lat);
     spot.lng = parseFloat(spot.lng);
     spot.price = parseFloat(spot.price);
-    console.log("BACKEND", spot)
     res.json(spot);
 });
 

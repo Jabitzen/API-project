@@ -24,51 +24,99 @@ module.exports = {
    await Spot.bulkCreate([
     {
       ownerId: 1,
-      address: "Lazenith Avenue",
-      city: "Ereonnor",
-      state: "Kayangel",
-      country: "Elgacia",
+      address: "Galaxy Avenue",
+      city: "Supernove",
+      state: "Outerspace",
+      country: "Universe",
       lat: 42.1337,
       lng: 86.7531,
-      name: "Ereonnor Lobby",
-      description: "The central hotspot of Elgacia, land of the Lazeniths",
+      name: "Galaxy way",
+      description: "The most luxurious place to stay in the cosmos",
       price: 24.98
     },
     {
       ownerId: 2,
-      address: "Yoz Lane",
-      city: "Umar",
-      state: "Blackrock",
-      country: "Yorn",
+      address: "Cosmodrome Landing",
+      city: "Winding Cove",
+      state: "Fallen Shore",
+      country: "European Dead Zone",
       lat: 21.8792,
       lng: 75.2348,
-      name: "The Great Castle",
-      description: "Land of the blacksmiths, Yorn is where the finest weapons are crafted",
+      name: "The cosmodrome",
+      description: "One of the few remaining places left from the golden age of humanity",
       price: 46.89
     },
     {
       ownerId: 3,
-      address: "Fort Shushire",
-      city: "Luterra",
-      state: "Yudia",
-      country: "Rethramis",
+      address: "Venus Landing",
+      city: "Venus",
+      state: "Rift",
+      country: "Ishtar Collective",
       lat: 57.9873,
       lng: 55.2340,
-      name: "Port Krona",
-      description: "Luterra's finest port with easy access to the vast seas of arkesia",
+      name: "Vault of Glass",
+      description: "Venus, one of the planets of sol currently inhabited by the advanced vex civilization",
       price: 34.89
     },
     {
-      ownerId: 3,
-      address: "Rohendel",
-      city: "Feiton",
-      state: "Kalaja",
-      country: "Rowen",
+      ownerId: 1,
+      address: "Mars",
+      city: "Hive",
+      state: "Xivu Arath",
+      country: "The great basin",
       lat: 35.9873,
       lng: 35.2340,
-      name: "Kalinar",
-      description: "The best place to blow through all of your gold for no upgrades",
+      name: "The red planet",
+      description: "Mars was the a place where clovis bray managed to create a technological empire, unfortunately it is now lost to the darkness",
       price: 77.89
+    },
+    {
+      ownerId: 1,
+      address: "Europa",
+      city: "Deep",
+      state: "Stone",
+      country: "House Salvation",
+      lat: 35.9873,
+      lng: 35.2340,
+      name: "The crypt",
+      description: "Europa is where humanity makes first contact with the darkness, that was then used to develop the exo race",
+      price: 67.89
+    },
+    {
+      ownerId: 1,
+      address: "Dreaming City",
+      city: "Mara",
+      state: "Sov",
+      country: "Pocket Dimension",
+      lat: 35.9873,
+      lng: 35.2340,
+      name: "The last wish",
+      description: "The dreaming city is the awoken's greatest secret holding one of the most dangerous creatures know to mankind",
+      price: 57.89
+    },
+    {
+      ownerId: 1,
+      address: "Moon Landing",
+      city: "Moon",
+      state: "Crota",
+      country: "The nightmare planet",
+      lat: 35.9873,
+      lng: 35.2340,
+      name: "Hellmouth",
+      description: "The moon was originally the domain of crota, a hive prince wielding a sinister sword",
+      price: 47.89
+    },
+    {
+      ownerId: 1,
+      address: "Io",
+      city: "Ikora",
+      state: "Rey",
+      country: "Ashir mir",
+      lat: 35.9873,
+      lng: 35.2340,
+      name: "The hidden valley",
+      description: "Io was a place for warlocks to master the light, and attune themselves to void energy",
+      price: 37.89
     }
    ], { validate: true });
   },
@@ -83,7 +131,7 @@ module.exports = {
     options.tableName = 'Spots';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(options, {
-      name: { [Op.in]: ['Ereonnor Lobby', 'The Great Castle', 'Port Krona', "Kalinar"] }
+      ownerId: { [Op.in]: [1, 2, 3] }
     }, {});
   }
 };
