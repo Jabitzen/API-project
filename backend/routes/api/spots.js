@@ -328,7 +328,7 @@ router.post('/:spotId/bookings', requireAuth, async (req, res) => {
     res.json(newBooking);
 });
 
-router.get('/:spotId', requireAuth, async (req, res) => {
+router.get('/:spotId', async (req, res) => {
     const spot = await Spot.findByPk(req.params.spotId, {
         include: [
             {
@@ -353,9 +353,6 @@ router.get('/:spotId', requireAuth, async (req, res) => {
     // hide url if preview is false
     const spotImages = spot.dataValues.SpotImages;
     for (image of spotImages) {
-        if (!image.dataValues.preview) {
-            image.dataValues.url = "No preview available";
-        }
     }
 
     let count = await Review.count({
@@ -376,6 +373,7 @@ router.get('/:spotId', requireAuth, async (req, res) => {
     spot.lat = parseFloat(spot.lat);
     spot.lng = parseFloat(spot.lng);
     spot.price = parseFloat(spot.price);
+    console.log("BACKEND", spot)
     res.json(spot);
 });
 
