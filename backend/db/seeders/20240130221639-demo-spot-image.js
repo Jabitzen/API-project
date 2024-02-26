@@ -23,7 +23,7 @@ module.exports = {
     await SpotImage.bulkCreate([
       {
         spotId: 1,
-        url: "https://images.ctfassets.net/umhrp0op95v1/3YXXX3qRkniuJ0ZERiHez3/4dceeae15cee2feca809a39ee8971816/LA_Elgacia_KayAngel_Beauty_Shots_0011_740.jpeg",
+        url: "https://m.media-amazon.com/images/I/81SNLEuNQuL.jpg",
         preview: true
       },
       {
@@ -48,7 +48,7 @@ module.exports = {
       },
       {
         spotId: 2,
-        url: "https://images.ctfassets.net/umhrp0op95v1/7zcOxjyT464azRCDVpQZCJ/ec15010734031691837760200a3e3e4d/Yorn-Notes-Header-1080.jpg",
+        url: "https://destiny.wiki.gallery/images/thumb/7/79/Cosmodrome_pano.jpg/1200px-Cosmodrome_pano.jpg",
         preview: true
       },
       {
@@ -73,52 +73,152 @@ module.exports = {
       },
       {
         spotId: 3,
-        url: "https://images.ctfassets.net/umhrp0op95v1/g6jo58M8vu9BOEw4Lab5S/7a53517db07c3e29259997a5926cafef/East_Luterra_740.jpg",
+        url: "https://destiny.wiki.gallery/images/6/67/Grimoire_Venus.jpg",
         preview: true
       },
       {
         spotId: 3,
-        url: "https://www.gamespot.com/a/uploads/scale_super/1552/15524586/3288078-2017091314185521.jpg",
+        url: "https://pbs.twimg.com/media/Bd5FmmpIEAAQys_.jpg",
         preview: false
       },
       {
         spotId: 3,
-        url: "https://www.gamespot.com/a/uploads/scale_super/1552/15524586/3288079-2017091310313737.jpg",
+        url: "https://cdn.mos.cms.futurecdn.net/CFhnxDSXFW9QMvGcXRTEAH-1200-80.jpg",
         preview: false
       },
       {
         spotId: 3,
-        url: "https://www.gamespot.com/a/uploads/scale_super/1552/15524586/3288080-2017091511013987.jpg",
+        url: "https://hothardware.com/newsimages/Item30738/Big_DestinyVenus.jpg",
         preview: false
       },
       {
         spotId: 3,
-        url: "https://www.gamespot.com/a/uploads/scale_super/1552/15524586/3288081-2017091510585057.jpg",
+        url: "https://i.pinimg.com/originals/74/79/11/747911bc162ef44e95182a23f1677d74.jpg",
         preview: false
       },
       {
         spotId: 4,
-        url: "https://images.ctfassets.net/umhrp0op95v1/4a4VThLd74ApE2bS053N40/1d2e02de3de6a4f643377da24c8d70ea/LA_Voldis_Beauty_Screenshot__3__740.jpeg",
+        url: "https://destiny.wiki.gallery/images/thumb/5/55/Grimoire_Mars.jpg/461px-Grimoire_Mars.jpg?20150914031856",
         preview: true
       },
       {
         spotId: 4,
-        url: "https://www.gamespot.com/a/uploads/scale_super/1552/15524586/3288090-2017091511352431.jpg",
+        url: "https://i.insider.com/53ee6ab16bb3f7cd3c812217?width=700",
         preview: false
       },
       {
         spotId: 4,
-        url: "https://www.gamespot.com/a/uploads/scale_super/1552/15524586/3288088-2017091511282715.jpg",
+        url: "https://imageio.forbes.com/specials-images/imageserve/5d6fab4b5b52ce0008824a07/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
         preview: false
       },
       {
         spotId: 4,
-        url: "https://www.gamespot.com/a/uploads/scale_super/1552/15524586/3288083-2017091511092219.jpg",
+        url: "https://i.redd.it/tadw5zob75f31.jpg",
         preview: false
       },
       {
         spotId: 4,
-        url: "https://www.gamespot.com/a/uploads/scale_super/1552/15524586/3288087-2017091511192193.jpg",
+        url: "https://pbs.twimg.com/media/BbER6V3IYAA1AHS.jpg:large",
+        preview: false
+      },
+      {
+        spotId: 5,
+        url: "https://destiny.wiki.gallery/images/5/54/Europa-moon.jpg",
+        preview: true
+      },
+      {
+        spotId: 5,
+        url: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/destiny-2/e/e0/Europa.jpg",
+        preview: false
+      },
+      {
+        spotId: 5,
+        url: "https://i.redd.it/3cjaayanp3s81.png",
+        preview: false
+      },
+      {
+        spotId: 5,
+        url: "https://d1lss44hh2trtw.cloudfront.net/assets/article/2020/11/11/reclaiming-europa-quest-destiny-2_feature.jpg",
+        preview: false
+      },
+      {
+        spotId: 5,
+        url: "https://cdn.mos.cms.futurecdn.net/npLBsvJtuVF4dpSLTWWxpZ.jpg",
+        preview: false
+      },
+      {
+        spotId: 6,
+        url: "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2018/08/destiny-2-forsaken-last-wish.jpg",
+        preview: true
+      },
+      {
+        spotId: 6,
+        url: "https://cdn.mos.cms.futurecdn.net/2yodcpeBohYHGFgmBVSdJU.jpg",
+        preview: false
+      },
+      {
+        spotId: 6,
+        url: "https://destiny.wiki.gallery/images/thumb/4/42/Dreamingcity.png/1200px-Dreamingcity.png",
+        preview: false
+      },
+      {
+        spotId: 6,
+        url: "https://imageio.forbes.com/blogs-images/insertcoin/files/2018/09/dreaming-city-destiny3.jpg?format=jpg&height=600&width=1200&fit=bounds",
+        preview: false
+      },
+      {
+        spotId: 6,
+        url: "https://s3.amazonaws.com/prod-media.gameinformer.com/styles/full/s3/2018/07/17/ecc33a36/DreamingCity2.jpg",
+        preview: false
+      },
+      {
+        spotId: 7,
+        url: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/destiny/c/c0/DTG_PlanetDetailPage_moon.jpg",
+        preview: true
+      },
+      {
+        spotId: 7,
+        url: "https://miro.medium.com/v2/resize:fit:1400/0*IrcmEvPNILuF7nSs.png",
+        preview: false
+      },
+      {
+        spotId: 7,
+        url: "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2019/07/destiny-2-shadowkeep-moon-map.jpg",
+        preview: false
+      },
+      {
+        spotId: 7,
+        url: "https://cdn.mos.cms.futurecdn.net/WGwpkLqsnxTSnKshdw2i7W.jpg",
+        preview: false
+      },
+      {
+        spotId: 7,
+        url: "https://cdn.vox-cdn.com/thumbor/1S3Q2m42RYGZ6-v-JYMQs4ciVtk=/0x0:1920x1080/1200x675/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/64017779/D2_Moon_01.0.jpg",
+        preview: false
+      },
+      {
+        spotId: 8,
+        url: "https://destiny.wiki.gallery/images/thumb/3/3f/Io1.jpg/428px-Io1.jpg?20210125085143",
+        preview: true
+      },
+      {
+        spotId: 8,
+        url: "https://i.redd.it/xl3xcjyi5tl01.png",
+        preview: false
+      },
+      {
+        spotId: 8,
+        url: "https://kseeker5.github.io/wallpapers/images/wallpapers/destiny2/Destiny%202%20-%20Io%205.png",
+        preview: false
+      },
+      {
+        spotId: 8,
+        url: "https://i.ytimg.com/vi/HwAcyoDhMn0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB-fhwk19NonJDm0HwJEkWivvVQwA",
+        preview: false
+      },
+      {
+        spotId: 8,
+        url: "https://cdnb.artstation.com/p/assets/images/images/032/809/667/large/eve-astra-cradle-tree-013.jpg?1607532549",
         preview: false
       },
     ], { validate: true });
@@ -134,7 +234,7 @@ module.exports = {
     options.tableName = 'SpotImages';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(options, {
-      spotId: { [Op.in]: [1, 2, 3, 4] }
+      spotId: { [Op.in]: [1, 2, 3, 4, 5, 6, 7, 8] }
     }, {});
   }
 };
